@@ -52,9 +52,11 @@ A few notes:
 7. Online: Initialize Hosting and add custom domain(s). Use Firebase-based redirect to map www to base domain.
 8. Online: Initialize Firebase Authentication (allowing Anonymous login by default).
 
-9. Update the site title in index.html (can also be programmatically updated on each page).
-10. Update the site Favicon in index.html
-11. Update global styles for site-specific theming, especially around colors.
+9. Re-run `firebase init` (inside cloned repository) NOTE: Configure as a single page app -> all requests served from `/` (which is responsible for differentiating based on the path) NOTE: dist library may have a subfolder created by nx. Have to specify the full path to get to index.html . This should update everything to use the appropriate project.
+
+10. Update the site title in index.html (can also be programmatically updated on each page).
+11. Update the site Favicon in index.html
+12. Update global styles for site-specific theming, especially around colors.
 
 ## Notes on Folder Structure
 VSCode allows creating workspaces (choose "Save Workspace As" to create a [directory name].code-workspace file). Within a workspace, specific rules can be set for subdirectories. Here's an example configuration for this project that resolves VS Code-level settings errors.
