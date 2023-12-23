@@ -39,6 +39,7 @@ A few notes:
   - NOTE: dist library may have a subfolder created by nx. Have to specify the full path to get to index.html . Set firebase hosting target to `frontend/dist/frontend`
   - NOTE: Configure as a single page app -> all requests served from `/` (which is responsible for differentiating based on the path) 
   - Download functions emulator for lower-latency testing.
+8. Create VS Code Workspace file. Reopen with VS Code.
 8. Run `npm i firebase` from frontend directory.
 9. Create firebaseConfig.ts (client side doesn't need to be gitignore'd, since data is available through hosting anyway.)
 10. Modify global styles for better text formatting, limiting text width, etc.
