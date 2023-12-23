@@ -28,19 +28,24 @@ A few notes:
 8. Run `npm i` from the frontend and functions directories
 
 ## Template Project Setup (largely taken care of by this repository):
-1. `npx create-nx-workspace frontend --preset=react-standalone` (makes Nx/Vite/React project inside frontend folder. Should choose regular CSS.)
+1. `npx create-nx-workspace frontend --preset=react-standalone` (makes Nx/Vite/React project inside frontend folder. Choose no test runner (for now), regular CSS, and no distributed caching.)
 2. Add Tailwind CSS Support (from frontend subfolder): `npx nx g @nrwl/react:setup-tailwind` (per https://blog.nrwl.io/setup-react-and-tailwind-the-easy-way-15592eebf4bc; there is an alternate, manual, process documented here: https://tailwindcss.com/docs/guides/vite)
 3. Frontend - Add Tailwind UI support: `npm install @headlessui/react @heroicons/react`
 4. Frontend - `npm i react-router-dom`
 5. Frontend - Create test build from frontend folder by running `npx nx build`
-6. `firebase init` (inside cloned repository) NOTE: Configure as a single page app -> all requests served from `/` (which is responsible for differentiating based on the path) NOTE: dist library may have a subfolder created by nx. Have to specify the full path to get to index.html .
-  7. set firebase hosting target to /frontend/dist
+6. `firebase init` (inside cloned repository)
+  - Hosting (configure), Emulators, Realtime Database, Firestore, Functions (Storage setup seems to require the Firebase project to be specified and initialized)
+  - (don't setup a default project, Typescript backend, decline to use ESLint to catch probable bugs - just use IDE) 
+  - NOTE: dist library may have a subfolder created by nx. Have to specify the full path to get to index.html . Set firebase hosting target to `frontend/dist/frontend`
+  - NOTE: Configure as a single page app -> all requests served from `/` (which is responsible for differentiating based on the path) 
+  - Download functions emulator for lower-latency testing.
 8. Run `npm i firebase` from frontend directory.
 9. Create firebaseConfig.ts (client side doesn't need to be gitignore'd, since data is available through hosting anyway.)
 10. Modify global styles for better text formatting, limiting text width, etc.
 11. Add default BrowserRouter and AuthProvider components (auth can use anonymous auth by default)
 12. Add 404 page routing.
 13. (Add a top-level and a logging error-catching component.)
+14. Re-run `npx nx build` from frontend.
 
 ## Project-Specific Setup
 1. Create a new project on Firebase. (If it asks, feel free to include Google Analytics by default, using the default Firebase account and creating a new property.)
@@ -52,7 +57,7 @@ A few notes:
 7. Online: Initialize Hosting and add custom domain(s). Use Firebase-based redirect to map www to base domain.
 8. Online: Initialize Firebase Authentication (allowing Anonymous login by default).
 
-9. Re-run `firebase init` (inside cloned repository) NOTE: Configure as a single page app -> all requests served from `/` (which is responsible for differentiating based on the path) NOTE: dist library may have a subfolder created by nx. Have to specify the full path to get to index.html . This should update everything to use the appropriate project.
+9. Run `firebase use --add` to specify project. Run `firebase init storage` from project root directory.
 
 10. Update the site title in index.html (can also be programmatically updated on each page).
 11. Update the site Favicon in index.html
