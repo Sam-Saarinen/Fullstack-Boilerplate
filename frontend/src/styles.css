@@ -1,1 +1,81 @@
+@tailwind base;
+@tailwind components; 
+@tailwind utilities;
 /* You can add global styles to this file, and also import other style files */
+/* Use Tailwind directives, like @apply to modify. */
+
+@layer base {
+  /* Global styles for generic elements that can use Tailwind properties */
+  /* These will always be overridden by any component-specific properties */
+
+  /* The Persistent Background Class is meant to be assigned to a div created in the global App component. */
+  .persistent-background {
+    /* Show behind everything. */
+    @apply fixed m-0 p-0 inset-0 -z-10;
+    /* Use extra height to make sure mobile address bar hiding doesn't reveal the edge */
+    @apply w-full h-[120%];
+    @apply bg-gradient-to-br from-gray-50 to-gray-200;
+    @apply dark:from-gray-950 dark:to-gray-800;
+  }
+  body {
+    @apply font-body;
+    /* Removed bg-fixed, as it caused scroll issues on mobile while address bar is hidden. */
+    /* @apply bg-fixed;
+    @apply bg-gradient-to-br from-yellow-100 to-blue-200;
+    @apply dark:from-purple-900 dark:to-blue-950; */
+    @apply text-[#000000] dark:text-[#FFFFFF];
+    /* @apply text-black dark:text-white; */
+  }
+  /* A helper class for creating theme-appropriate backgrounds on divs, etc. */
+  .background {
+    /* @apply bg-white dark:bg-black; */
+    @apply bg-[#FFFFFF] dark:bg-[#000000];
+  }
+  /* All text divs */
+  h1, h2, h3, h4, h5, h6, p, ul, ol, .balanced-div {
+    @apply max-w-2xl mx-auto px-2 md:px-0;
+  }
+  /* All title divs */
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-center;
+    /* @apply font-title; */
+  }
+  h1 {
+    @apply text-3xl md:text-4xl mt-4;
+  }
+  h2 {
+    @apply text-2xl md:text-3xl mt-3;
+  }
+  h3 {
+    @apply text-xl md:text-2xl mt-2;
+  }
+  p, .balanced-div {
+    @apply mt-1;
+  }
+  p {
+    /* @apply italic; */
+    @apply leading-tight indent-4;
+  }
+
+  a {
+    @apply underline;
+  }
+  button {
+    @apply bg-[#FFFFFF] dark:bg-[#000000] border-green-300 dark:border-purple-700 border-2 rounded-xl shadow-md p-1;
+  }
+  ul {
+    @apply list-disc list-inside;
+  }
+  .art {
+    @apply rounded-xl shadow-md my-4 mx-auto;
+  }
+}
+
+/* @layer components is for things like cards, buttons (btn), badges, etc. that may have many variants, but should have sensible defaults. */
+
+/* @layer utilities is for object-specific modifiers that I'd like to include. General adjustments (colors, breakpoints, etc.) can go in the tailwind config file. This is really for unusual CSS features I'd like to exploit, and to be able to combine with existing modifiers. */
+/* @layer utilities {
+  .bg-brand-gradient {
+
+  }
+} */
