@@ -34,7 +34,7 @@ A few notes:
 4. Frontend - `npm i react-router-dom`
 5. Frontend - Create test build from frontend folder by running `npx nx build`
 6. `firebase init` (inside cloned repository)
-  - Hosting (configure), Emulators, Realtime Database, Firestore, Functions (Storage setup seems to require the Firebase project to be specified and initialized)
+  - Hosting (configure), Emulators, Firestore, Functions (Storage setup seems to require the Firebase project to be specified and initialized)
   - (don't setup a default project, Typescript backend, decline to use ESLint to catch probable bugs - just use IDE) 
   - NOTE: dist library may have a subfolder created by nx. Have to specify the full path to get to index.html . Set firebase hosting target to `frontend/dist/frontend`
   - NOTE: Configure as a single page app -> all requests served from `/` (which is responsible for differentiating based on the path) 
