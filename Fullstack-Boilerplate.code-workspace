@@ -1,0 +1,22 @@
+{
+  "folders": [
+    {
+      "path": "frontend",
+      "name": "Frontend"
+    },
+    {
+      "path": "functions",
+      "name": "Functions"
+    },
+		{
+			"path": ".",
+			"name": "Root"
+		}
+  ],
+  "settings": {
+    "eslint.workingDirectories": [
+      { "directory": "frontend", "changeProcessCWD": true },
+      { "directory": "functions", "changeProcessCWD": true }
+    ]
+  }
+}
