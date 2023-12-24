@@ -60,7 +60,7 @@ A few notes:
 
 1. Fork the boilerplate project (if under a different account). Otherwise, can create a private repository and import the boilerplate. Then, add the remote repository as `git remote add upstream https://github.com/Sam-Saarinen/Fullstack-Boilerplate.git`. (Verify with `git remote -v`.) Run `git pull upstream main` if repository wasn't imported directly to create the repository. Use `git status` to verify that changes will push to (tracking) origin/main. (TODO: It seems to support pulling, but it's unclear whethere the permissions for pushing back upstream are supported.)
 
-9. Run `firebase use --add` to specify project. Run `firebase init storage` from project root directory.
+9. Run `firebase init storage` from project root directory. (Run `firebase use --add` to specify project if not using init statement. Asks for an alias; not sure why.)
 
 10. Update the site title in index.html (can also be programmatically updated on each page).
 11. Update the site Favicon in index.html
