@@ -1,5 +1,8 @@
 @tailwind base;
-@tailwind components; 
+@tailwind components;
+@tailwind utilities;
+@tailwind base;
+@tailwind components;
 @tailwind utilities;
 /* You can add global styles to this file, and also import other style files */
 /* Use Tailwind directives, like @apply to modify. */
@@ -32,11 +35,25 @@
     @apply bg-[#FFFFFF] dark:bg-[#000000];
   }
   /* All text divs */
-  h1, h2, h3, h4, h5, h6, p, ul, ol, .balanced-div {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul,
+  ol,
+  .balanced-div {
     @apply max-w-2xl mx-auto px-2 md:px-0;
   }
   /* All title divs */
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply text-center;
     /* @apply font-title; */
   }
@@ -49,7 +66,8 @@
   h3 {
     @apply text-xl md:text-2xl mt-2;
   }
-  p, .balanced-div {
+  p,
+  .balanced-div {
     @apply mt-1;
   }
   p {
