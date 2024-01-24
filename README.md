@@ -23,7 +23,7 @@ A few notes:
   - Tailwind CSS Intellisense
   - Live Server (not strictly necessary, but enables easy testing of build directory if not using firebase hosting emulators)
   - Nx Console (haven't used much)
-6. Clone using GitHub command-line-interface (which needs to be installed if not installed already)
+6. Clone using GitHub command-line-interface (which needs to be installed if not installed already). Also, use `--recursive` tag if available to download submodules automatically.
 7. Open as a VS Code workspace.
 8. Run `npm i` from the frontend and functions directories
 9. Run `git submodule update --remote`
