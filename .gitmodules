@@ -1,0 +1,15 @@
+[submodule "frontend/src/fullstack-utilities"]
+	path = frontend/src/fullstack-utilities
+	url = https://github.com/Sam-Saarinen/fullstack-utilities.git
+[submodule "frontend/src/knowledge-types"]
+	path = frontend/src/knowledge-types
+	url = https://github.com/Sam-Saarinen/knowledge-types.git
+[submodule "frontend/src/tag-tree"]
+	path = frontend/src/tag-tree
+	url = https://github.com/Sam-Saarinen/tag-tree.git
+[submodule "functions/src/fullstack-utilities"]
+	path = functions/src/fullstack-utilities
+	url = https://github.com/Sam-Saarinen/fullstack-utilities.git
+[submodule "functions/src/knowledge-types"]
+	path = functions/src/knowledge-types
+	url = https://github.com/Sam-Saarinen/knowledge-types.git

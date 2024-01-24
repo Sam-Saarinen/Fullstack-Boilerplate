@@ -26,6 +26,7 @@ A few notes:
 6. Clone using GitHub command-line-interface (which needs to be installed if not installed already)
 7. Open as a VS Code workspace.
 8. Run `npm i` from the frontend and functions directories
+9. Run `git submodule update --remote`
 
 ## Template Project Setup (largely taken care of by this repository):
 1. `npx create-nx-workspace frontend --preset=react-standalone` (makes Nx/Vite/React project inside frontend folder. Choose no test runner (for now), regular CSS, and no distributed caching.)
@@ -48,6 +49,14 @@ A few notes:
 13. (Add a top-level and a logging error-catching component.)
 14. Re-run `npx nx build` from frontend. (Or `npm run build`, which calls this command.)
 15. (If desired) add rules to .eslintrc.json to warn (instead of error) for unused vars.
+16. Run `git submodule init` in main directory. Then:
+```
+git submodule add <submodule-repo-url> <path-to-submodule>
+git submodule update --init --recursive
+git commit -m "Added submodule"
+git push
+```
+for the utilities and knowlege-types repositories. (Not all of these steps may be necessary in this order.)
 
 ## Project-Specific Setup
 1. Create a new project on Firebase. (If it asks, feel free to include Google Analytics by default, using the default Firebase account and creating a new property.)
@@ -148,6 +157,7 @@ Don't need to `firebase login` on codespace. Prefer to deploy from local unless 
   - Notes on why TailwindCSS isn't usually used with SASS: https://tailwindcss.com/docs/using-with-preprocessors
 - Maybe for some future project: Single-Page Apps using Next.js: https://colinhacks.com/essays/building-a-spa-with-nextjs
 - React Router Documentation: https://reactrouter.com/en/main
+- Using Git Submodules: https://github.blog/2016-02-01-working-with-submodules/
 
 ## Misc. Backlog
 Maybe someday these will get added to this repository:
