@@ -1,9 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 /* You can add global styles to this file, and also import other style files */
 /* Use Tailwind directives, like @apply to modify. */
 
@@ -17,11 +14,10 @@
     @apply fixed m-0 p-0 inset-0 -z-10;
     /* Use extra height to make sure mobile address bar hiding doesn't reveal the edge */
     @apply w-full h-[120%];
-    @apply bg-gradient-to-br from-gray-50 to-gray-200;
-    @apply dark:from-gray-950 dark:to-gray-800;
+    @apply bg-gradient-to-br from-gray-50 to-gray-400 dark:from-gray-900 dark:to-gray-600;
   }
   body {
-    @apply font-body;
+    /* @apply font-body; */
     /* Removed bg-fixed, as it caused scroll issues on mobile while address bar is hidden. */
     /* @apply bg-fixed;
     @apply bg-gradient-to-br from-yellow-100 to-blue-200;
@@ -86,6 +82,10 @@
   }
   .art {
     @apply rounded-xl shadow-md my-4 mx-auto;
+  }
+
+  input, textarea {
+    @apply text-[#000000] w-full p-2 m-4 mx-auto rounded-xl border shadow;
   }
 }
 

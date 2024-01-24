@@ -39,14 +39,15 @@ A few notes:
   - NOTE: dist library may have a subfolder created by nx. Have to specify the full path to get to index.html . Set firebase hosting target to `frontend/dist/frontend`
   - NOTE: Configure as a single page app -> all requests served from `/` (which is responsible for differentiating based on the path) 
   - Download functions emulator for lower-latency testing.
-8. Create VS Code Workspace file. Reopen with VS Code.
+7. Create VS Code Workspace file. Reopen with VS Code.
 8. Run `npm i firebase` from frontend directory.
 9. Create firebaseConfig.ts (client side doesn't need to be gitignore'd, since data is available through hosting anyway.)
 10. Modify global styles for better text formatting, limiting text width, etc.
 11. Add default BrowserRouter and AuthProvider components (auth can use anonymous auth by default)
 12. Add 404 page routing.
 13. (Add a top-level and a logging error-catching component.)
-14. Re-run `npx nx build` from frontend.
+14. Re-run `npx nx build` from frontend. (Or `npm run build`, which calls this command.)
+15. (If desired) add rules to .eslintrc.json to warn (instead of error) for unused vars.
 
 ## Project-Specific Setup
 1. Create a new project on Firebase. (If it asks, feel free to include Google Analytics by default, using the default Firebase account and creating a new property.)
@@ -153,3 +154,4 @@ Maybe someday these will get added to this repository:
 - [ ] Testing libraries and setup
 - [ ] Commonly-used submodules (included)
 - [ ] Better developer documentation?
+- [ ] Nx Cache settings (currently disabled) in nx.json to better optimize build processes?
